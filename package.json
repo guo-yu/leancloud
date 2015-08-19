@@ -1,0 +1,25 @@
+{
+  "name": "LeanCloud",
+  "version": "0.1.0",
+  "description": "a unofficial minimal Node.js SDK of LeanCloud",
+  "main": "dist/leancloud.js",
+  "scripts": {
+    "build": "node_modules/.bin/babel libs --out-dir dist --source-maps --watch",
+    "test": "node_modules/.bin/mocha tests/*.js --require tests/babelhook.js"
+  },
+  "keywords": [
+    "LeanCloud",
+    "AVOS",
+    "AVOSCloud"
+  ],
+  "author": "turing <o.u.turing@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "sdk": "0.4.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "mocha": "^2.2.5",
+    "should": "^7.0.4"
+  }
+}
