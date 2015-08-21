@@ -5,6 +5,7 @@
   "main": "dist/leancloud.js",
   "scripts": {
     "build": "node_modules/.bin/babel libs --out-dir dist --source-maps --watch",
+    "test-spec": "DEBUG=sdk,sdk:* node_modules/.bin/mocha --require tests/babelhook.js",
     "test": "node_modules/.bin/mocha tests/*.js --require tests/babelhook.js"
   },
   "keywords": [
@@ -15,7 +16,8 @@
   "author": "turing <o.u.turing@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "sdk": "0.4.1"
+    "avoscloud-sign": "0.1.0",
+    "sdk": "0.5.0"
   },
   "devDependencies": {
     "babel": "^5.8.21",
