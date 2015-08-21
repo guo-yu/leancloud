@@ -1,24 +1,13 @@
-export default function({appId, appKey, appSign}) {
+import Sign from 'avoscloud-sign'
+
+export default function({appId, appKey, masterKey}) {
   const headers = {
     'X-AVOSCloud-Application-Id': appId,
+    'X-AVOSCloud-Request-Sign': () => masterKey ? Sign(masterKey, true) : Sign(appKey)
   }
 
-  if (appKey)
-    headers['X-AVOSCloud-Application-Key'] = appKey
-  if (appSign)
-    headers['X-AVOSCloud-Request-Sign'] = appSign
-
-  retrun {
-    get: {
-      headers
-    },
-    post: {
-      headers
-    },
-    delete: {
-      headers
-    },
-    put: {
+  return {
+    all: {
       headers
     }
   }

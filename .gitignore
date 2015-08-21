@@ -3,4 +3,5 @@ node_modules
 *.sublime*
 psd
 thumb
-*.log
+*.logtest/configs.json
+tests/configs.json

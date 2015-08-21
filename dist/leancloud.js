@@ -20,18 +20,15 @@ var _rules = require('./rules');
 
 var _rules2 = _interopRequireDefault(_rules);
 
-var LeanCloud = function LeanCloud(_ref) {
-  var appId = _ref.appId;
-  var appKey = _ref.appKey;
-
+var LeanCloud = function LeanCloud(configs) {
   _classCallCheck(this, LeanCloud);
 
-  if (!(appId && appKey)) throw new Error('leancloud.init() appId and appKey are both required');
+  if (!configs || !(configs.appId && configs.appKey)) throw new Error('leancloud.init() appId and appKey are both required');
 
   this.HOST = 'https://leancloud.cn';
   this.API_VERSION = '1.1';
 
-  return new _sdk2['default'](this.HOST + '/' + this.API_VERSION, _api2['default'], (0, _rules2['default'])({ appId: appId, appSign: appSign }));
+  return new _sdk2['default'](this.HOST + '/' + this.API_VERSION + '/', _api2['default'], (0, _rules2['default'])(configs));
 };
 
 exports['default'] = LeanCloud;

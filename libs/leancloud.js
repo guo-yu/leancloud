@@ -2,9 +2,18 @@ import SDK from 'sdk'
 import APIs from './api'
 import rules from './rules'
 
-const HOST = 'https://leancloud.cn'
-const API_VERSION = '1.1'
+export default class LeanCloud {
+  constructor(configs) {
+    if (!configs || !(configs.appId && configs.appKey))
+      throw new Error('leancloud.init() appId and appKey are both required')
 
-export default function(configs) {
-  return new SDK(`${HOST}/${API_VERSION}`, APIs, rules(configs))
+    this.HOST = 'https://leancloud.cn'
+    this.API_VERSION = '1.1'
+
+    return new SDK(
+      `${this.HOST}/${this.API_VERSION}/`, 
+      APIs, 
+      rules(configs)
+    )
+  }
 }

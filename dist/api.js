@@ -7,99 +7,99 @@ exports['default'] = {
   // classes
   createClass: {
     method: 'post',
-    url: '/classes/{{className}}'
+    url: 'classes/{{className}}'
   },
   classes: {
     method: 'get',
-    url: '/classes/{{className}}'
+    url: 'classes/{{className}}'
   },
   fetchObject: {
     method: 'get',
-    url: '/classes/{{className}}/{{objectId}}'
+    url: 'classes/{{className}}/{{objectId}}'
   },
   updateObject: {
     method: 'put',
-    url: '/classes/{{className}}/{{objectId}}'
+    url: 'classes/{{className}}/{{objectId}}'
   },
   // users
   signup: {
     method: 'post',
-    url: '/users'
+    url: 'users'
   },
   signByPhone: {
     method: 'post',
-    url: '/usersByMobilePhone'
+    url: 'usersByMobilePhone'
   },
   signin: {
-    url: '/login'
+    url: 'login'
   },
   login: {
-    url: '/login'
+    url: 'login'
   },
   user: {
-    url: '/users/{{objectId}}'
+    url: 'users/{{objectId}}'
   },
   users: {
-    url: '/users'
+    url: 'users'
   },
   updatePassword: {
     method: 'put',
-    url: '/users/{{objectId}}/updatePassword'
+    url: 'users/{{objectId}}/updatePassword'
   },
   updateUser: {
     method: 'put',
-    url: '/users/{{objectId}}'
+    url: 'users/{{objectId}}'
   },
   removeUser: {
     method: 'delete',
-    url: '/users/{{objectId}}'
+    url: 'users/{{objectId}}'
   },
   requestPasswordReset: {
     method: 'post',
-    url: '/requestPasswordReset'
+    url: 'requestPasswordReset'
   },
   requestEmailVerify: {
     method: 'post',
-    url: '/requestEmailVerify'
+    url: 'requestEmailVerify'
   },
   requestMobilePhoneVerify: {
     method: 'post',
-    url: '/requestMobilePhoneVerify'
+    url: 'requestMobilePhoneVerify'
   },
   verifyMobilePhone: {
     method: 'post',
-    url: '/verifyMobilePhone/{{code}}'
+    url: 'verifyMobilePhone/{{code}}'
   },
   requestLoginSmsCode: {
     method: 'post',
-    url: '/requestLoginSmsCode'
+    url: 'requestLoginSmsCode'
   },
   requestPasswordResetBySmsCode: {
     method: 'post',
-    url: '/requestPasswordResetBySmsCode'
+    url: 'requestPasswordResetBySmsCode'
   },
   resetPasswordBySmsCode: {
     method: 'put',
-    url: '/resetPasswordBySmsCode'
+    url: 'resetPasswordBySmsCode'
   },
   // roles
   role: {
-    url: '/roles/{{objectId}}'
+    url: 'roles/{{objectId}}'
   },
   roles: {
-    url: '/roles'
+    url: 'roles'
   },
   createRole: {
     method: 'post',
-    url: '/roles'
+    url: 'roles'
   },
   updateRole: {
     method: 'put',
-    url: '/roles/{{objectId}}'
+    url: 'roles/{{objectId}}'
   },
   removeRole: {
     method: 'delete',
-    url: '/roles/{{objectId}}'
+    url: 'roles/{{objectId}}'
   },
   // Push
   push: {
@@ -109,46 +109,46 @@ exports['default'] = {
   // Installations
   createInstallation: {
     method: 'post',
-    url: '/installations'
+    url: 'installations'
   },
   installation: {
-    url: '/installations/{{objectId}}'
+    url: 'installations/{{objectId}}'
   },
   installations: {
-    url: '/installations'
+    url: 'installations'
   },
   updateInstallation: {
     method: 'put',
-    url: '/installations/{{objectId}}'
+    url: 'installations/{{objectId}}'
   },
   removeInstallation: {
     method: 'delete',
-    url: '/installations/{{objectId}}'
+    url: 'installations/{{objectId}}'
   },
   // functions
   callFunction: {
     method: 'post',
-    url: '/functions'
+    url: 'functions'
   },
   // feedback
   createFeedback: {
     method: 'post',
-    url: '/feedback'
+    url: 'feedback'
   },
   // states
   stats: {
-    url: '/stats/{{type}}'
+    url: 'stats/{{type}}'
   },
   // rtm
   createMessage: {
     method: 'post',
-    url: '/rtm/messages'
+    url: 'rtm/messages'
   },
   historyMessages: {
-    url: '/rtm/messages/logs'
+    url: 'rtm/messages/logs'
   },
   onlines: {
-    url: '/rtm/transient_group/onlines'
+    url: 'rtm/transient_group/onlines'
   }
 };
 module.exports = exports['default'];
