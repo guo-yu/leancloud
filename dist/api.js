@@ -13,6 +13,10 @@ exports['default'] = {
     method: 'get',
     url: 'classes/{{className}}'
   },
+  removeClass: {
+    method: 'delete',
+    url: 'classes/{{className}}'
+  },
   fetchObject: {
     method: 'get',
     url: 'classes/{{className}}/{{objectId}}'
